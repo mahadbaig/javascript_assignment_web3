@@ -79,11 +79,26 @@ for(i = 0;i < names.length; i++){
     console.log(`Hi there, ${names[i]}`);
 }
 
-// Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples. Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
+// Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a car, and make a list that stores several examples. 
+// Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
 
-// Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner. Then use your list to print a message to each person, inviting them to dinner.
+let myOwnArray = ["Suzuki 150 GS" , "Audi A3" , "Private Jet"]
 
-// Changing Guest List: You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations. You’ll have to think of someone else to invite.
+for(i = 0 ; i < myOwnArray.length ; i ++){
+    console.log(`I would someday like to own ${myOwnArray[i]}`)
+}
+
+// Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three 
+// people you’d like to invite to dinner. Then use your list to print a message to each person, inviting them to dinner.
+
+let guestList = ['Elon Musk' , 'Mansa Musa' , 'Rockerfeller' , 'Vladimir Putin']
+
+for(i = 0; i <guestList.length ; i++){
+    console.log(`Mr.${guestList[i]}, I invite to a dinner at my house`);
+}
+
+// Changing Guest List: You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations. 
+// You’ll have to think of someone else to invite.
 
 // • Start with your program from Exercise 14. Add a print statement at the end of your program stating the name of the guest who can’t make it.
 
@@ -91,12 +106,37 @@ for(i = 0;i < names.length; i++){
 
 // • Print a second set of invitation messages, one for each person who is still in your list.
 
+guestList[2] = "Imran Khan"
+
+for(i = 0; i<guestList.length;i++){
+    if(guestList[i] == "Rockerfeller"){
+        continue
+    }else{
+        console.log(`Mr.${guestList[i]}, I am very sad to inform you that Mr. Rockerfeller won't be attending the dinner
+        instead Mr. Imran Khan will be joining us!`);
+    }
+}
+
 // More Guests: You just found a bigger dinner table, so now more space is available. Think of three more guests to invite to dinner.
 // • Start with your program from Exercise 15. Add a print statement to the end of your program informing people that you found a bigger dinner table.
 
 // • Add one new guest to the beginning of your array.
 
-// • Add one new guest to the middle of your array. • Use append() to add one new guest to the end of your list. • Print a new set of invitation messages, one for each person in your list.
+// • Add one new guest to the middle of your array. 
+// • Use append() to add one new guest to the end of your list. 
+// • Print a new set of invitation messages, one for each person in your list.
+
+for(i =0;i<guestList.length;i++){
+    console.log(`Mr.${guestList[i]} I found a bigger dinner table, therefore I'll be inviting three more people`);
+}
+
+guestList.push("Harry Potter~")
+guestList.unshift("Super Mario")
+guestList.splice(2,0,"Zia Khan")
+
+for(i =0;i <guestList.length ; i++){
+    console.log(`Mr.${guestList[i]}, The venue for dinner has been changed`);
+}
 
 // Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
 // • Start with your program from Exercise 16. Add a new line that prints a message saying that you can invite only two people for dinner.
